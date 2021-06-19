@@ -4,35 +4,65 @@
 
 using namespace std;
 
-typedef struct t_contact
+class Contact
 {
-	string first_name;
-	string last_name;
+private:
+	string firstName;
+	string lastName;
 	string nickname;
 	string login;
-	string postal_address;
-	string email_address;
-	string phone_number;
-	string birthday_date;
-	string favorite_meal;
-	string underwear_color;
-	string darkest_secret;
-}				s_contact;
-
-class Phonebook{
-private:
-	t_contact contact[8]/*()*/;
+	string postalAddress;
+	string emailAddress;
+	string phoneNumber;
+	string birthdayDate;
+	string favoriteMeal;
+	string underwearColor;
+	string darkestSecret;
 public:
-	void search(t_contact *contact);
+	Contact();
+
+	void setFirstName(string value);
+	void setLastName(string value);
+	void setNickname(string value);
+	void setLogin(string value);
+	void setPostalAddress(string value);
+	void setBirthdayDate(string value);
+	void setEmailAddress(string value);
+	void setPhoneNumber(string value);
+	void setFavoriteMeal(string value);
+	void setUnderwearColor(string value);
+	void setDarkestSecret(string value);
+
+	string getFirstName();
+	string getLastName();
+	string getNickname();
+	string getLogin();
+	string getBirthdayDate();
+	string getPostalAddress();
+	string getEmailAddress();
+	string getPhoneNumber();
+	string getFavoriteMeal();
+	string getUnderwearColor();
+	string getDarkestSecret();
 };
 
-void Phonebook::search(t_contact *contact)
-{
-	for (int i = 0; contact[i], i++)
-	{
-		cout << right << setw(10) << i << "|" << contact[i].first_name << "|"
-		<< contact[i].last_name << "|" << contact[i].nickname;
-	}
-}
+
+
+/**
+ * array of contacts &
+ * i - index of last contact
+ */
+class PhoneBook{
+private:
+	Contact contact[8];
+	int i;
+public:
+	PhoneBook();
+	void addContact();
+	void printContact();
+};
+
+
+
 
 #endif

@@ -8,4 +8,6 @@ add_executable(CPP00.ex00
         )
 add_executable(CPP00.ex01
         cpp00/ex01/main.cpp
+        cpp00/ex01/getters.cpp
+        cpp00/ex01/setters.cpp
         )
