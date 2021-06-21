@@ -7,26 +7,36 @@ using namespace std;
 
 string formatting_string(string value)
 {
+	string spaces =  " ";
 	if (value.size() > 10)
 	{
 		value.erase(9);
 		value.append(".");
+		return value;
 	} else if (value.size() < 10)
 	{
-		value.insert(1, " ", 10 - value.size());
+		int space_counter = 10 - value.size();
+		for (int i = 0; i < space_counter - 1; i++)
+		{
+			spaces.append(" ");
+		}
+		spaces.append(value);
+		return spaces;
+	} else
+	{
+		return (value);
 	}
-	return value;
 }
 
 void PhoneBook::printContact()
 {
+	string value;
 	for (int counter = 0; counter < i; counter++)
 	{
-		/*std::cout << std::left << std::setw(10) << "Hello" << "World\n";*/
 		cout << right << setw(10) << counter << "|" <<
-		contact[counter].getFirstName().size() > 10 : .erase(9).append(".")
-		<< "|" << contact[counter].getLastName().erase(9).append(".") <<
-		contact[counter].getNickname().erase(9).append(".") << endl;
+		formatting_string(contact[counter].getFirstName())
+		<< "|" << formatting_string(contact[counter].getLastName()) << "|" <<
+		formatting_string(contact[counter].getNickname()) << "|" << endl;
 	}
 }
 
@@ -59,7 +69,11 @@ void PhoneBook::addContact()
 	i++;
 }
 
-_Noreturn void loop(PhoneBook phoneBook)
+/**
+ * endless function with wait commands
+ * @param phoneBook - class witch all contacts
+ */
+void loop(PhoneBook phoneBook)
 {
 	string command;
 	while(true)
@@ -78,13 +92,19 @@ _Noreturn void loop(PhoneBook phoneBook)
 	}
 }
 
+/**
+ * default constructor
+ */
 Contact::Contact() : firstName(""), lastName(""), nickname(""), login(""), postalAddress(""),
 					 emailAddress(""), phoneNumber(""), birthdayDate(""), favoriteMeal(""),
 					 underwearColor(""), darkestSecret("") {}
 
+/**
+ * default constructor
+ */
 PhoneBook::PhoneBook() : i(0) {}
 
-int main (int ac, char *av[])
+int main ()
 {
 	PhoneBook phoneBook;
 	loop(phoneBook);
