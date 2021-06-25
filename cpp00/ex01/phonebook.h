@@ -33,6 +33,9 @@ public:
 	void setUnderwearColor(string value);
 	void setDarkestSecret(string value);
 
+	typedef void(Contact::*setter)(string);
+	static setter set_methods[12];
+
 	string getFirstName();
 	string getLastName();
 	string getNickname();
