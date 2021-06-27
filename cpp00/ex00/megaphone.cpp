@@ -18,5 +18,5 @@ int main (int ac, char **av)
 		cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << endl;
 	else
 		for (int i = 1; av[i]; i++)
-			cout << megaphone(av[i]) << " ";
+			cout << megaphone(av[i]);
 }

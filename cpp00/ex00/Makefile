@@ -11,11 +11,11 @@ OBJ = $(SRC:.cpp=.o)
 all:
 	$(MAKE) $(NAME) -j 4
 
-$(NAME): $(OBJ) $(LIBFT)
-	g++ -o $(NAME) $(OBJ)
+$(NAME): $(OBJ)
+	clang++ -o $(NAME) $(OBJ)
 
-%.o: %.c
-	g++ -c $< -o $@
+%.o: %.cpp
+	clang++ -c $< -o $@
 
 clean:
 	$(RM) $(OBJ)
