@@ -6,8 +6,10 @@ set(CMAKE_CXX_STANDARD 98)
 add_executable(CPP00.ex00
         cpp00/ex00/megaphone.cpp
         )
+include_directories(cpp00/ex01/)
 add_executable(CPP00.ex01
         cpp00/ex01/main.cpp
         cpp00/ex01/getters.cpp
         cpp00/ex01/setters.cpp
+        cpp00/ex01/constructors.cpp
         )

@@ -55,7 +55,7 @@ void Contact::setUnderwearColor(string value)
 
 void Contact::setDarkestSecret(string value)
 {
-	this->underwearColor = value;
+	this->darkestSecret = value;
 }
 
 
