@@ -13,3 +13,10 @@ add_executable(CPP00.ex01
         cpp00/ex01/setters.cpp
         cpp00/ex01/constructors.cpp
         )
+include_directories(cpp01/ex00)
+add_executable(CPP01.ex00
+        cpp01/ex00/main.cpp
+        cpp01/ex00/Zombie.cpp
+        cpp01/ex00/randomChump.cpp
+        cpp01/ex00/newZombie.cpp
+        )
