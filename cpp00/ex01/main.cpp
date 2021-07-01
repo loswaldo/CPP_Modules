@@ -6,11 +6,14 @@
 #include "phonebook.h"
 #include "defines.h"
 
-using namespace std;
-
-string formatting_string(string value)
+/**
+ * formatting string for short output contacts
+ * @param value string
+ * @return formatted string
+ */
+std::string formatting_string(std::string value)
 {
-	string spaces =  " ";
+	std::string spaces =  " ";
 	if (value.size() > 10)
 	{
 		value.erase(9);
@@ -36,11 +39,11 @@ string formatting_string(string value)
  */
 void PhoneBook::printAllContact()
 {
-	string value;
+	std::string value;
 	for (int counter = 0; counter < i; counter++)
 	{
-		cout <<  BOLD BLUE "_____________________________________________" STD << endl;
-		cout
+		std::cout <<  BOLD BLUE "_____________________________________________" STD << endl;
+		std::cout
 		<< right << setw(10)
 		<< counter
 		<< BOLD BLUE "|" STD
@@ -50,14 +53,14 @@ void PhoneBook::printAllContact()
 		<< BOLD BLUE "|" STD
 		<< formatting_string(contact[counter].getNickname())
 		<< BOLD BLUE "|" STD
-		<< endl;
+		<< std::endl;
 	}
 }
 
 
 void PhoneBook::printFullContact() {
-	string value;
-	const string messages[11] = {"First Name", "Second Name", "Nickname",
+	std::string value;
+	const std::string messages[11] = {"First Name", "Second Name", "Nickname",
 				 "Login", "Postal Address", "Email Address",
 				 "Phone Number", "Birthday Date", "Favorite Meal",
 				 "Underwear Color", "Darkest Secret"};
@@ -66,9 +69,9 @@ void PhoneBook::printFullContact() {
 				   &Contact::getEmailAddress, &Contact::getPhoneNumber, &Contact::getBirthdayDate,
 				   &Contact::getFavoriteMeal, &Contact::getUnderwearColor, &Contact::getDarkestSecret};
 
-	cout << BLUE "\nWrite index for full information " << YELLOW "(⊙ヮ⊙)\n" << DARK_BLUE " ->: " STD;
-	cin >> value;
-	if ((value.find_first_not_of("1234567890") == string::npos))
+	std::cout << BLUE "\nWrite index for full information " << YELLOW "(⊙ヮ⊙)\n" << DARK_BLUE " ->: " STD;
+	std::cin >> value;
+	if ((value.find_first_not_of("1234567890") == string::npos) && !std::cin.eof())
 	{
 		stringstream geek(value);
 		int x = 0;
@@ -77,12 +80,12 @@ void PhoneBook::printFullContact() {
 		{
 			for (int counter = 0; counter < 11; counter++)
 			{
-				cout << left << setw(16) << messages[counter] << ":" ;
-				cout <<  BOLD BLUE << (contact[x].*get_methods[counter])() << STD << endl;
+				std::cout << left << setw(16) << messages[counter] << ":" ;
+				std::cout <<  BOLD BLUE << (contact[x].*get_methods[counter])() << STD << std::endl;
 			}
 		} else
 		{
-			cout << RED << "Wrong index" << YELLOW " (ಠ╭╮ಠ)" STD << endl;
+			std::cout << RED << "Wrong index" << YELLOW " (ಠ╭╮ಠ)" STD << std::endl;
 		}
 	}
 }
@@ -92,8 +95,8 @@ void PhoneBook::printFullContact() {
  */
 void PhoneBook::addContact()
 {
-	string value;
-	const string messages[11] = {"First Name:", "Second Name:", "Nickname:",
+	std::string value;
+	const std::string messages[11] = {"First Name:", "Second Name:", "Nickname:",
 				  "Login", "Postal Address:", "Email Address:",
 				  "Phone Number:", "Birthday Date:", "Favorite Meal:",
 				  "Underwear Color:", "Darkest Secret:"};
@@ -102,18 +105,18 @@ void PhoneBook::addContact()
 				   &Contact::setEmailAddress, &Contact::setPhoneNumber, &Contact::setBirthdayDate,
 				   &Contact::setFavoriteMeal, &Contact::setUnderwearColor, &Contact::setDarkestSecret};
 	if (i >= 8)
-		cout << RED << "You have max numbers of contact" << YELLOW "୧( ಠ Д ಠ )୨" STD << endl;
+		std::cout << RED << "You have max numbers of contact" << YELLOW "୧( ಠ Д ಠ )୨" STD << std::endl;
 	else
 	{
-		cout << GREEN "Please fill in the following fields" << YELLOW "(✿◠‿◠)" STD << endl;
+		std::cout << GREEN "Please fill in the following fields" << YELLOW "(✿◠‿◠)" STD << std::endl;
 		for (int counter = 0; counter < 11; counter++)
 		{
-			cout << messages[counter] << endl;
-			cin >> value;
+			std::cout << messages[counter] << std::endl;
+			std::cin >> value;
 			(contact[i].*set_methods[counter])(value);
 		}
 		i++;
-		cout << GREEN "You successful add new contact" << YELLOW "(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ " STD << endl;
+		std::cout << GREEN "You successful add new contact" << YELLOW "(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ " STD << std::endl;
 	}
 }
 
@@ -123,11 +126,13 @@ void PhoneBook::addContact()
  */
 void loop(PhoneBook phoneBook)
 {
-	string command;
+	std::string command;
 	while(true)
 	{
-		cout << DARK_BLUE " ->: " STD;
-		cin >> command;
+		std::cout << DARK_BLUE " ->: " STD;
+		std::cin >> command;
+		if (std::cin.eof())
+			exit(0);
 		if (command == "ADD")
 		{
 			phoneBook.addContact();
@@ -138,7 +143,7 @@ void loop(PhoneBook phoneBook)
 			phoneBook.printFullContact();
 		} else if (command == "EXIT")
 		{
-			cout << DARK_BLUE "You lost all contacts. Bye!" << YELLOW "(ಥ﹏ಥ) "<< endl;
+			std::cout << DARK_BLUE "You lost all contacts. Bye!" << YELLOW "(ಥ﹏ಥ) "<< std::endl;
 			exit(0);
 		}
 	}
@@ -150,7 +155,7 @@ int main ()
 {
 	PhoneBook phoneBook;
 
-	cout <<
+	std::cout <<
 		"**************************************************************\n"
   		"*              Hello! This is a phone book."
   		<< YELLOW"(◕‿◕)" STD "             *\n"
