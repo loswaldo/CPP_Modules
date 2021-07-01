@@ -20,3 +20,25 @@ add_executable(CPP01.ex00
         cpp01/ex00/randomChump.cpp
         cpp01/ex00/newZombie.cpp
         )
+
+include_directories(cpp01/ex01)
+add_executable(CPP01.ex01
+        cpp01/ex01/main.cpp
+        cpp01/ex01/Zombie.cpp
+        cpp01/ex01/ZombieHorde.cpp
+        )
+
+include_directories(cpp01/ex02)
+add_executable(CPP01.ex02
+        cpp01/ex02/main.cpp
+        )
+
+include_directories(cpp01/ex03)
+add_executable(CPP01.ex03
+        cpp01/ex03/main.cpp
+        cpp01/ex03/Weapon.cpp
+#        cpp01/ex03/Weapon.h
+        cpp01/ex03/HumanB.cpp
+        cpp01/ex03/HumanA.cpp
+#        cpp01/ex03/HumanB.h
+        )
