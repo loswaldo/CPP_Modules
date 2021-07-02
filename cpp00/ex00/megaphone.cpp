@@ -1,9 +1,6 @@
 #include <iostream>
 
-
-using namespace std;
-
-string megaphone(string str)
+std::string megaphone(std::string str)
 {
 	for(int i = 0; str[i]; i++)
 	{
@@ -15,8 +12,8 @@ string megaphone(string str)
 int main (int ac, char **av)
 {
 	if (ac == 1)
-		cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << endl;
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
 	else
 		for (int i = 1; av[i]; i++)
-			cout << megaphone(av[i]);
+			std::cout << megaphone(av[i]);
 }

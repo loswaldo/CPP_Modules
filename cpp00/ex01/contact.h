@@ -8,48 +8,48 @@ using namespace std;
 class Contact
 {
 private:
-	string firstName;
-	string lastName;
-	string nickname;
-	string login;
-	string postalAddress;
-	string emailAddress;
-	string phoneNumber;
-	string birthdayDate;
-	string favoriteMeal;
-	string underwearColor;
-	string darkestSecret;
+	std::string firstName;
+	std::string lastName;
+	std::string nickname;
+	std::string login;
+	std::string postalAddress;
+	std::string emailAddress;
+	std::string phoneNumber;
+	std::string birthdayDate;
+	std::string favoriteMeal;
+	std::string underwearColor;
+	std::string darkestSecret;
 public:
 	Contact();
 
-	void setFirstName(string value);
-	void setLastName(string value);
-	void setNickname(string value);
-	void setLogin(string value);
-	void setPostalAddress(string value);
-	void setBirthdayDate(string value);
-	void setEmailAddress(string value);
-	void setPhoneNumber(string value);
-	void setFavoriteMeal(string value);
-	void setUnderwearColor(string value);
-	void setDarkestSecret(string value);
+	void setFirstName(std::string value);
+	void setLastName(std::string value);
+	void setNickname(std::string value);
+	void setLogin(std::string value);
+	void setPostalAddress(std::string value);
+	void setBirthdayDate(std::string value);
+	void setEmailAddress(std::string value);
+	void setPhoneNumber(std::string value);
+	void setFavoriteMeal(std::string value);
+	void setUnderwearColor(std::string value);
+	void setDarkestSecret(std::string value);
 
-	typedef void(Contact::*setter)(string);
+	typedef void(Contact::*setter)(std::string);
 	static setter set_methods[12];
 
-	string getFirstName();
-	string getLastName();
-	string getNickname();
-	string getLogin();
-	string getBirthdayDate();
-	string getPostalAddress();
-	string getEmailAddress();
-	string getPhoneNumber();
-	string getFavoriteMeal();
-	string getUnderwearColor();
-	string getDarkestSecret();
+	std::string getFirstName();
+	std::string getLastName();
+	std::string getNickname();
+	std::string getLogin();
+	std::string getBirthdayDate();
+	std::string getPostalAddress();
+	std::string getEmailAddress();
+	std::string getPhoneNumber();
+	std::string getFavoriteMeal();
+	std::string getUnderwearColor();
+	std::string getDarkestSecret();
 
-	typedef string (Contact::*getter)();
+	typedef std::string (Contact::*getter)();
 	static getter get_methods[12];
 };
 
