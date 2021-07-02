@@ -13,3 +13,5 @@ std::string Weapon::getType() {
 }
 
 Weapon::Weapon() {}
+
+Weapon::Weapon(std::string typeName) : type(typeName){}

@@ -8,6 +8,6 @@ void HumanA::attack() {
 	std::cout << name << " attacks with his " << weapon.getType() << std::endl;
 }
 
-HumanA::HumanA() :name("Povar") {
-weapon.setType("Kitchen knife");
-}
+HumanA::HumanA(std::string humanName, Weapon &newWeapon) :name(humanName),
+weapon(newWeapon){}
+

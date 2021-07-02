@@ -3,8 +3,12 @@
 int main()
 {
 	Zombie *first;
-	newZombie("Pup")->announce();
+	Zombie *second;
+	second= newZombie("Pup");
 	first = newZombie("sjdiksl");
 	first->announce();
+	second->announce();
 	randomChump("gg");
+	delete first;
+	delete second;
 }

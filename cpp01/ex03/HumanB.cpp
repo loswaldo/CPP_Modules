@@ -5,11 +5,13 @@
 #include "HumanB.h"
 
 void HumanB::attack() {
-	std::cout << name << " attacks with his " << weapon.getType() << std::endl;
+	std::cout << name << " attacks with his " << weapon->getType() << std::endl;
 }
 
-HumanB::HumanB() : name("Bubup") {}
+HumanB::HumanB(std::string humanName) : name(humanName), weapon(NULL){
+//	weapon->setType("none");
+}
 
-HumanB::HumanB(std::string weaponType) : name("Bubup"){
-weapon.setType(weaponType);
+void HumanB::setWeapon(Weapon &newWeapon) {
+	weapon = &newWeapon;
 }
