@@ -52,3 +52,9 @@ add_executable(CPP01.ex05
         cpp01/ex05/Karen.cpp
         cpp01/ex05/Karen.h
         cpp01/ex05/main.cpp)
+
+include_directories(cpp01/ex06)
+add_executable(CPP01.ex06
+        cpp01/ex06/Karen.cpp
+        cpp01/ex06/Karen.h
+        cpp01/ex06/main.cpp)
