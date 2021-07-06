@@ -2,15 +2,14 @@
 // Created by shaurmyashka on 7/4/21.
 //
 
-#include <iostream>
 #include "Karen.h"
 int main()
 {
 	Karen karen;
-	karen.complain("info");
-	karen.complain("debug");
-	karen.complain("error");
-	karen.complain("warning");
+	karen.complain("DEBUG");
+	karen.complain("INFO");
+	karen.complain("WARNING");
+	karen.complain("ERROR");
 	karen.complain("lol");
 
 }

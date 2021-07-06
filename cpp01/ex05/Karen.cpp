@@ -27,7 +27,7 @@ void Karen::complain(std::string level) {
 
 	Karen::method methods[4] = {&Karen::info, &Karen::debug,
 							 &Karen::error, &Karen::warning};
-	std::string levels[4] = {"info", "debug", "error", "warning"};
+	std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 	int counter = 0;
 	while(counter < 4)
 	{
