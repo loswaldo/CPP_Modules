@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 98)
 
 add_executable(CPP00.ex00
         cpp00/ex00/megaphone.cpp
-        cpp01/ex05/Karen.cpp cpp01/ex05/Karen.h cpp01/ex05/main.cpp)
+        )
 include_directories(cpp00/ex01/)
 add_executable(CPP00.ex01
         cpp00/ex01/main.cpp
