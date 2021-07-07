@@ -58,3 +58,24 @@ add_executable(CPP01.ex06
         cpp01/ex06/Karen.cpp
         cpp01/ex06/Karen.h
         cpp01/ex06/main.cpp)
+
+include_directories(cpp02/ex00)
+add_executable(CPP02.ex00
+        cpp02/ex00/main.cpp
+        cpp02/ex00/Fixed.cpp
+        cpp02/ex00/Fixed.h
+        )
+
+include_directories(cpp02/ex01)
+add_executable(CPP02.ex01
+        cpp02/ex01/main.cpp
+        cpp02/ex01/Fixed.cpp
+        cpp02/ex01/Fixed.h
+        )
+
+include_directories(cpp02/ex02)
+add_executable(CPP02.ex02
+        cpp02/ex02/main.cpp
+        cpp02/ex02/Fixed.cpp
+        cpp02/ex02/Fixed.h
+        )
