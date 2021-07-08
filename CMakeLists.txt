@@ -79,3 +79,25 @@ add_executable(CPP02.ex02
         cpp02/ex02/Fixed.cpp
         cpp02/ex02/Fixed.h
         )
+
+include_directories(cpp03/ex00)
+add_executable(CPP03.ex00
+        cpp03/ex00/main.cpp
+        cpp03/ex00/ClapTrap.cpp
+        cpp03/ex00/ClapTrap.h
+        )
+
+include_directories(cpp03/ex01)
+add_executable(CPP03.ex01
+        cpp03/ex01/ClapTrap.cpp
+        cpp03/ex01/ClapTrap.h
+        cpp03/ex01/main.cpp
+        )
+
+#include_directories(cpp03/ex02)
+#add_executable(CPP03.ex02
+#        cpp03/ex02/main.cpp)
+
+#include_directories(cpp03/ex03)
+#add_executable(CPP03.ex03
+#        cpp03/ex03/main.cpp)
