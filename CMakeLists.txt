@@ -92,7 +92,7 @@ add_executable(CPP03.ex01
         cpp03/ex01/ClapTrap.cpp
         cpp03/ex01/ClapTrap.h
         cpp03/ex01/main.cpp
-        )
+        cpp03/ex01/ScavTrap.cpp cpp03/ex01/ScavTrap.h)
 
 #include_directories(cpp03/ex02)
 #add_executable(CPP03.ex02
