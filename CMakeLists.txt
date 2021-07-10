@@ -106,6 +106,14 @@ add_executable(CPP03.ex02
         cpp03/ex02/FragTrap.cpp
         cpp03/ex02/FragTrap.h)
 
-#include_directories(cpp03/ex03)
-#add_executable(CPP03.ex03
-#        cpp03/ex03/main.cpp)
+include_directories(cpp03/ex03)
+add_executable(CPP03.ex03
+        cpp03/ex02/ClapTrap.cpp
+        cpp03/ex02/ClapTrap.h
+        cpp03/ex02/ScavTrap.cpp
+        cpp03/ex02/ScavTrap.h
+        cpp03/ex02/main.cpp
+        cpp03/ex02/FragTrap.cpp
+        cpp03/ex02/FragTrap.h
+        cpp03/ex03/DiamondTrap.cpp
+        cpp03/ex03/DiamondTrap.h)
