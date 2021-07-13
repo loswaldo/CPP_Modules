@@ -29,10 +29,6 @@ Fixed::~Fixed() {
 	std::cout << "Destructor called" << std::endl;
 }
 
-Fixed &Fixed::operator=(const Fixed &fixed) const {
-	return <#initializer#>;
-}
-
 Fixed &Fixed::operator=(const Fixed &fixed) {
 	std::cout << "Assignation operator called" << std::endl;
 	if (this != &fixed)
