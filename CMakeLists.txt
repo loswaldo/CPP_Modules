@@ -108,12 +108,12 @@ add_executable(CPP03.ex02
 
 include_directories(cpp03/ex03)
 add_executable(CPP03.ex03
-        cpp03/ex02/ClapTrap.cpp
-        cpp03/ex02/ClapTrap.h
-        cpp03/ex02/ScavTrap.cpp
-        cpp03/ex02/ScavTrap.h
-        cpp03/ex02/main.cpp
-        cpp03/ex02/FragTrap.cpp
-        cpp03/ex02/FragTrap.h
+        cpp03/ex03/ClapTrap.cpp
+        cpp03/ex03/ClapTrap.h
+        cpp03/ex03/ScavTrap.cpp
+        cpp03/ex03/ScavTrap.h
+        cpp03/ex03/main.cpp
+        cpp03/ex03/FragTrap.cpp
+        cpp03/ex03/FragTrap.h
         cpp03/ex03/DiamondTrap.cpp
         cpp03/ex03/DiamondTrap.h)

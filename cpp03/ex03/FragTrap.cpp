@@ -4,11 +4,9 @@
 
 #include "FragTrap.h"
 
-FragTrap::FragTrap(std::string new_name) : ClapTrap(new_name) {
+FragTrap::FragTrap(std::string new_name, int hit, int energy, int attack) :
+			ClapTrap(new_name, hit,energy, attack){
 	std::cout << YELLOW "FragTrap default destructor called" STD << std::endl;
-	hitPoints = 100;
-	energyPoints = 100;
-	attackDamage = 30;
 }
 
 void FragTrap::attack(const std::string &target) {
@@ -16,15 +14,15 @@ void FragTrap::attack(const std::string &target) {
 }
 
 void FragTrap::takeDamage(unsigned int amount) {
-	std::cout << GREEN "ClapTrap " << name << " take " << amount << " points of damage!" STD << std::endl;
+	std::cout << GREEN "FragTrap " << name << " take " << amount << " points of damage!" STD << std::endl;
 }
 
 void FragTrap::beRepaired(unsigned int amount) {
-	std::cout << GREEN "ClapTrap " << name << " repaired " << amount << " points of hit points!" STD << std::endl;
+	std::cout << GREEN "FragTrap " << name << " repaired " << amount << " points of hit points!" STD << std::endl;
 }
 
 FragTrap::~FragTrap() {
-	std::cout << YELLOW "ClapTrap default destructor called" STD << std::endl;
+	std::cout << YELLOW "FragTrap default destructor called" STD << std::endl;
 }
 
 void FragTrap::highFivesGuys() {

@@ -21,7 +21,7 @@ ClapTrap::~ClapTrap() {
 	std::cout << YELLOW "ClapTrap default destructor called" STD << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string new_name) : name(new_name),
-				hitPoints(10), energyPoints(10), attackDamage(0){
+ClapTrap::ClapTrap(std::string new_name, int hit, int energy, int attack) :
+name(new_name), hitPoints(hit), energyPoints(energy), attackDamage(attack){
 	std::cout << YELLOW "ClapTrap default constructor called" STD << std::endl;
 }

@@ -4,11 +4,9 @@
 
 #include "ScavTrap.h"
 
-ScavTrap::ScavTrap(std::string new_name) : ClapTrap(new_name){
+ScavTrap::ScavTrap(std::string new_name, int hit, int energy, int attack) :
+			ClapTrap(new_name, hit, energy, attack){
 	std::cout << YELLOW "ScavTrap default destructor called" STD << std::endl;
-	hitPoints = 100;
-	energyPoints = 50;
-	attackDamage = 20;
 }
 
 void ScavTrap::guardGate() {

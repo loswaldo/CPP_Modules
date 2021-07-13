@@ -22,7 +22,7 @@ protected:
 	int energyPoints;
 	int attackDamage;
 public:
-	ClapTrap(std::string name);
+	ClapTrap(std::string name, int hit = 10, int energy = 10, int attack = 10);
 	~ClapTrap();
 	void attack(std::string const & target);
 	void takeDamage(unsigned int amount);

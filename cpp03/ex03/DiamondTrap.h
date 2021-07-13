@@ -9,11 +9,15 @@
 #include "FragTrap.h"
 
 class DiamondTrap : public ScavTrap, public FragTrap{
+protected:
+	std::string name;
 public:
-	DiamondTrap(std::string newName1, std::string newName);
-	void attack(std::string const & target);
+	DiamondTrap(std::string newName, int hit = 100, int energy = 100, int attack = 30);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
+	using ScavTrap::attack;
+	void whoAmI();
+	~DiamondTrap();
 
 };
 

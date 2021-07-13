@@ -7,9 +7,9 @@
 
 #include "ClapTrap.h"
 
-class FragTrap : public ClapTrap{
+class FragTrap : virtual public ClapTrap{
 public:
-	FragTrap(std::string new_name);
+	FragTrap(std::string new_name, int hit = 100, int energy= 100, int attack = 30);
 	~FragTrap();
 	void attack(std::string const & target);
 	void takeDamage(unsigned int amount);
