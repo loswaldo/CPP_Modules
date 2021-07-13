@@ -17,5 +17,4 @@ public:
 	void highFivesGuys();
 };
 
-
 #endif //CPP00_FRAGTRAP_H
