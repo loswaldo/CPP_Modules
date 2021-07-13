@@ -30,7 +30,8 @@ int main(int ac, char **av)
 	{
 		int pos;
 		std::getline(outf, content);
-		if ((pos = content.find(av[2])) != std::string::npos)
+		pos = 0;
+		while ((pos = content.find(av[2], pos + strlen(av[3]))) != std::string::npos)
 		{
 			content.erase(pos, strlen(av[2]));
 			content.insert(pos, av[3]);
