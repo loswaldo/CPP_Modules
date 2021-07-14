@@ -117,3 +117,24 @@ add_executable(CPP03.ex03
         cpp03/ex03/FragTrap.h
         cpp03/ex03/DiamondTrap.cpp
         cpp03/ex03/DiamondTrap.h)
+
+include_directories(cpp04/ex00)
+add_executable(CPP04.ex00
+        cpp04/ex00/main.cpp
+        cpp04/ex00/Animal.cpp
+        cpp04/ex00/Animal.h
+        cpp04/ex00/Dog.cpp
+        cpp04/ex00/Dog.h
+        cpp04/ex00/Cat.cpp
+        cpp04/ex00/Cat.h
+        cpp04/ex00/WrongAnimal.cpp
+        cpp04/ex00/WrongAnimal.h
+        cpp04/ex00/WrongCat.cpp
+        cpp04/ex00/WrongCat.h
+        )
+
+
+
+
+
+
