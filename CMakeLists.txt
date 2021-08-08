@@ -133,6 +133,18 @@ add_executable(CPP04.ex00
         cpp04/ex00/WrongCat.h
         )
 
+include_directories(cpp04/ex01)
+add_executable(CPP04.ex01
+        cpp04/ex01/main.cpp
+        cpp04/ex01/Animal.cpp
+        cpp04/ex01/Animal.h
+        cpp04/ex01/Dog.cpp
+        cpp04/ex01/Dog.h
+        cpp04/ex01/Cat.cpp
+        cpp04/ex01/Cat.h
+        cpp04/ex01/Brain.cpp
+        cpp04/ex01/Brain.h)
+
 
 
 
