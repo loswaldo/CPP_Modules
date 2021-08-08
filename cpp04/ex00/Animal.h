@@ -12,7 +12,7 @@ protected:
 	std::string type;
 public:
 	Animal(std::string type = "");
-	~Animal();
+	virtual ~Animal();
 	virtual void makeSound() const;
 	std::string getType() const;
 	Animal& operator= (const Animal &animal);

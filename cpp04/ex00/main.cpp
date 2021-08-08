@@ -20,4 +20,8 @@ int main(){
 	const WrongAnimal* w_cat = new WrongCat();
 	std::cout << w_cat->getType() << " " << std::endl;
 	w_cat->makeSound();
+	delete meta;
+	delete j;
+	delete i;
+	delete w_cat;
 }
