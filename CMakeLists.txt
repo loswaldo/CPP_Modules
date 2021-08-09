@@ -145,6 +145,18 @@ add_executable(CPP04.ex01
         cpp04/ex01/Brain.cpp
         cpp04/ex01/Brain.h)
 
+include_directories(cpp04/ex02)
+add_executable(CPP04.ex02
+        cpp04/ex02/main.cpp
+        cpp04/ex02/Animal.cpp
+        cpp04/ex02/Animal.h
+        cpp04/ex02/Dog.cpp
+        cpp04/ex02/Dog.h
+        cpp04/ex02/Cat.cpp
+        cpp04/ex02/Cat.h
+        cpp04/ex02/Brain.cpp
+        cpp04/ex02/Brain.h)
+
 
 
 
