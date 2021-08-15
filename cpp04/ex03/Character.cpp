@@ -78,7 +78,7 @@ Character &Character::operator=(const Character &character) {
 		for (int counter = 0; counter < 4; counter++)
 		{
 			delete inventory[counter];
-			inventory[counter] = character.inventory[counter] ? character.inventory[counter] : NULL;
+			inventory[counter] = character.inventory[counter] ? character.inventory[counter]->clone() : NULL;
 		}
 		return *this;
 	}
