@@ -24,6 +24,7 @@ Character::~Character() {
 		if (inventory[counter] != NULL)
 		{
 			delete inventory[counter];
+			inventory[counter] = NULL;
 		}
 		counter++;
 	}
@@ -64,4 +65,21 @@ void Character::use(int idx, ICharacter &target) {
 	}
 	else
 		std::cout << "Error: wrong index" << std::endl;
+}
+
+Character::Character(const Character &character) {
+	*this = character;
+}
+
+Character &Character::operator=(const Character &character) {
+	if (this != &character)
+	{
+		this->name = character.name;
+		for (int counter = 0; counter < 4; counter++)
+		{
+			delete inventory[counter];
+			inventory[counter] = character.inventory[counter] ? character.inventory[counter] : NULL;
+		}
+		return *this;
+	}
 }

@@ -157,6 +157,11 @@ add_executable(CPP04.ex02
         cpp04/ex02/Brain.cpp
         cpp04/ex02/Brain.h)
 
+include_directories(cpp04/ex03)
+add_executable(CPP04.ex03
+        cpp04/ex03/main.cpp
+        cpp04/ex03/main.cpp cpp04/ex03/AMateria.cpp cpp04/ex03/AMateria.h cpp04/ex03/ICharacter.cpp cpp04/ex03/ICharacter.h cpp04/ex03/IMateriaSource.cpp cpp04/ex03/IMateriaSource.h cpp04/ex03/MateriaSource.cpp cpp04/ex03/MateriaSource.h cpp04/ex03/Ice.cpp cpp04/ex03/Ice.h cpp04/ex03/Cure.cpp cpp04/ex03/Cure.h cpp04/ex03/Character.cpp cpp04/ex03/Character.h cpp04/ex03/NoneMateria.cpp cpp04/ex03/NoneMateria.h)
+
 
 
 
