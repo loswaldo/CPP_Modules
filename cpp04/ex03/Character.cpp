@@ -10,7 +10,6 @@ const std::string &Character::getName() const {
 }
 
 Character::Character(std::string newName) : name(newName), i(0){
-	name = newName;
 	for (int counter = 0; counter < 4; counter++)
 	{
 		inventory[counter] = NULL;

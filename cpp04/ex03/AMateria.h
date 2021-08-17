@@ -6,6 +6,7 @@
 #define CPP00_AMATERIA_H
 
 #include <iostream>
+//#include "includes.h"
 #include "ICharacter.h"
 
 

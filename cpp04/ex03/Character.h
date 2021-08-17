@@ -5,6 +5,7 @@
 #ifndef CPP00_CHARACTER_H
 #define CPP00_CHARACTER_H
 
+#include <iostream>
 #include "ICharacter.h"
 
 class Character : public ICharacter{
