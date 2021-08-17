@@ -3,8 +3,6 @@
 //
 
 #include <iostream>
-#include <Fixed.h>
-
 #include "Fixed.h"
 
 Fixed::Fixed() : value(0){
