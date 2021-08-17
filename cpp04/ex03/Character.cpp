@@ -25,7 +25,6 @@ Character::~Character() {
 			delete inventory[counter];
 			inventory[counter] = NULL;
 		}
-		counter++;
 	}
 }
 
@@ -79,6 +78,6 @@ Character &Character::operator=(const Character &character) {
 			delete inventory[counter];
 			inventory[counter] = character.inventory[counter] ? character.inventory[counter]->clone() : NULL;
 		}
-		return *this;
 	}
+	return *this;
 }

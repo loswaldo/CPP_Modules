@@ -5,7 +5,7 @@
 #ifndef CPP00_MATERIASOURCE_H
 #define CPP00_MATERIASOURCE_H
 
-#include <IMateriaSource.h>
+#include "IMateriaSource.h"
 
 class MateriaSource: public IMateriaSource{
 	AMateria* array[4];

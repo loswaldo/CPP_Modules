@@ -42,9 +42,9 @@ Brain &Brain::operator=(const Brain &brain) {
 }
 
 void Brain::setIdeas(std::string *array) {
-	int i = 0;
-	while (array[i].length() != 0 && i < 100)
-		ideas[i] = array[i];
+	for (int i = 0; i < 100; i++)
+		if (array[i].length() != 0)
+			ideas[i] = array[i];
 }
 
 Brain::Brain(const Brain &brain) {
