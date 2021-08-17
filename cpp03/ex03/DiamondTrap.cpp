@@ -5,9 +5,10 @@
 #include "DiamondTrap.h"
 
 DiamondTrap::DiamondTrap(std::string newName, int hit, int energy, int attack) :
-			ScavTrap(newName, hit, energy, attack),
-			FragTrap(newName, hit, energy, attack),
-			ClapTrap(newName, hit, energy, attack) {
+		ClapTrap(newName, hit, energy, attack),
+		ScavTrap(newName, hit, energy, attack),
+		FragTrap(newName, hit, energy, attack)
+{
 	name = ClapTrap::name + "_clap_name";
 	std::cout << YELLOW "DiamondTrap default destructor called" STD << std::endl;
 }

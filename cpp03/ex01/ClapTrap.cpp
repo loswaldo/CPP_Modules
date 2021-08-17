@@ -25,3 +25,19 @@ ClapTrap::ClapTrap(std::string new_name) : name(new_name),
 				hitPoints(10), energyPoints(10), attackDamage(0){
 	std::cout << YELLOW "ClapTrap default constructor called" STD << std::endl;
 }
+
+ClapTrap::ClapTrap(const ClapTrap &clapTrap) {
+	std::cout << "Copy constructor called" << std::endl;
+	*this = clapTrap;
+}
+
+ClapTrap &ClapTrap::operator=(const ClapTrap &clapTrap) {
+	std::cout << "Assignation operator called" << std::endl;
+	if (this != &clapTrap) {
+		this->name = clapTrap.name;
+		this->hitPoints = clapTrap.hitPoints;
+		this->energyPoints = clapTrap.energyPoints;
+		this->attackDamage = clapTrap.attackDamage;
+	}
+	return *this;
+}

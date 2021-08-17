@@ -13,6 +13,7 @@ protected:
 	std::string name;
 public:
 	DiamondTrap(std::string newName, int hit = 100, int energy = 100, int attack = 30);
+//	DiamondTrap(std::string newName);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
 	using ScavTrap::attack;
