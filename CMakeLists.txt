@@ -163,7 +163,6 @@ add_executable(CPP04.ex03
         cpp04/ex03/main.cpp
         cpp04/ex03/AMateria.cpp
         cpp04/ex03/AMateria.h
-#        cpp04/ex03/ICharacter.cpp
         cpp04/ex03/ICharacter.h
         cpp04/ex03/IMateriaSource.cpp
         cpp04/ex03/IMateriaSource.h
@@ -175,9 +174,11 @@ add_executable(CPP04.ex03
         cpp04/ex03/Cure.h
         cpp04/ex03/Character.cpp
         cpp04/ex03/Character.h
-#        cpp04/ex03/NoneMateria.cpp
-#        cpp04/ex03/NoneMateria.h
-        cpp04/ex03/includes.h)
+        )
+
+include_directories(cpp05/ex00)
+add_executable(CPP05.ex00
+        cpp05/ex00/main.cpp cpp05/ex00/Bureaucrat.cpp cpp05/ex00/Bureaucrat.h)
 
 
 
