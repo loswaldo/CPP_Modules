@@ -40,7 +40,7 @@ void ShrubberyCreationForm::execute(const Bureaucrat &executor) const {
 				 "               )  ___/#\\::`/ (O \"==._____   O, (O  /`\n"
 				 "          ~~~w/w~\"~~,\\` `:/,-(~`\"~~~~~~~~\"~o~\\~/~w|/~\n"
 				 "dew   ~~~~~~~~~~~~~~~~~~~~~~~\\\\W~~~~~~~~~~~~\\|/~~\n"
-				 "more trees: https://ascii.co.uk/art/tree";
+				 "more trees: https://ascii.co.uk/art/tree\n";
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &shrubberyCreationForm)
