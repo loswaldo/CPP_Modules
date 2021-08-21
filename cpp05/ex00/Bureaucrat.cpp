@@ -45,7 +45,8 @@ void Bureaucrat::decGrade() {
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &bureaucrat) {
 	if (this != &bureaucrat)
 	{
-		this->grade = bureaucrat.grade; /* todo: name?*/
+		this->grade = bureaucrat.grade;
+		this->name = bureaucrat.name;
 	}
 	return *this;
 }
