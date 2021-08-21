@@ -201,7 +201,30 @@ add_executable(CPP05.ex02
         cpp05/ex02/Form.cpp
         cpp05/ex02/Form.cpp
         cpp05/ex02/Form.h
-        cpp05/ex02/ShrubberyCreationForm.cpp cpp05/ex02/ShrubberyCreationForm.h cpp05/ex02/RobotomyRequestForm.cpp cpp05/ex02/RobotomyRequestForm.h cpp05/ex02/PresidentialPardonForm.cpp cpp05/ex02/PresidentialPardonForm.h)
+        cpp05/ex02/ShrubberyCreationForm.cpp
+        cpp05/ex02/ShrubberyCreationForm.h
+        cpp05/ex02/RobotomyRequestForm.cpp
+        cpp05/ex02/RobotomyRequestForm.h
+        cpp05/ex02/PresidentialPardonForm.cpp
+        cpp05/ex02/PresidentialPardonForm.h
+        )
+
+
+include_directories(cpp05/ex03)
+add_executable(CPP05.ex03
+        cpp05/ex03/main.cpp
+        cpp05/ex03/Bureaucrat.cpp
+        cpp05/ex03/Bureaucrat.h
+        cpp05/ex03/Form.cpp
+        cpp05/ex03/Form.cpp
+        cpp05/ex03/Form.h
+        cpp05/ex03/ShrubberyCreationForm.cpp
+        cpp05/ex03/ShrubberyCreationForm.h
+        cpp05/ex03/RobotomyRequestForm.cpp
+        cpp05/ex03/RobotomyRequestForm.h
+        cpp05/ex03/PresidentialPardonForm.cpp
+        cpp05/ex03/PresidentialPardonForm.h
+        cpp05/ex03/Intern.cpp cpp05/ex03/Intern.h)
 
 
 
