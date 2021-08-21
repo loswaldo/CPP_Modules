@@ -178,7 +178,20 @@ add_executable(CPP04.ex03
 
 include_directories(cpp05/ex00)
 add_executable(CPP05.ex00
-        cpp05/ex00/main.cpp cpp05/ex00/Bureaucrat.cpp cpp05/ex00/Bureaucrat.h)
+        cpp05/ex00/main.cpp
+        cpp05/ex00/Bureaucrat.cpp
+        cpp05/ex00/Bureaucrat.h
+        )
+
+include_directories(cpp05/ex01)
+add_executable(CPP05.ex01
+        cpp05/ex01/main.cpp
+        cpp05/ex01/Bureaucrat.cpp
+        cpp05/ex01/Bureaucrat.h
+        cpp05/ex01/Form.cpp
+        cpp05/ex01/Form.cpp
+        cpp05/ex01/Form.h
+        )
 
 
 
