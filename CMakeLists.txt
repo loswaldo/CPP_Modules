@@ -193,6 +193,15 @@ add_executable(CPP05.ex01
         cpp05/ex01/Form.h
         )
 
+include_directories(cpp05/ex02)
+add_executable(CPP05.ex02
+        cpp05/ex02/main.cpp
+        cpp05/ex02/Bureaucrat.cpp
+        cpp05/ex02/Bureaucrat.h
+        cpp05/ex02/Form.cpp
+        cpp05/ex02/Form.cpp
+        cpp05/ex02/Form.h
+        cpp05/ex02/ShrubberyCreationForm.cpp cpp05/ex02/ShrubberyCreationForm.h cpp05/ex02/RobotomyRequestForm.cpp cpp05/ex02/RobotomyRequestForm.h cpp05/ex02/PresidentialPardonForm.cpp cpp05/ex02/PresidentialPardonForm.h)
 
 
 
