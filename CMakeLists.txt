@@ -251,7 +251,13 @@ add_executable(CPP06.ex02
 
 include_directories(cpp07/ex00)
 add_executable(CPP07.ex00
-        cpp07/ex00/main.cpp cpp07/ex00/whatever.h)
+        cpp07/ex00/main.cpp
+        cpp07/ex00/whatever.h
+        )
+
+include_directories(cpp07/ex01)
+add_executable(CPP07.ex01
+        cpp07/ex01/main.cpp cpp07/ex01/iter.h)
 
 
 
