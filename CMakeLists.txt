@@ -229,7 +229,14 @@ add_executable(CPP05.ex03
 
 include_directories(cpp06/ex00)
 add_executable(CPP06.ex00
-        cpp06/ex00/main.cpp cpp06/ex00/Convert.cpp cpp06/ex00/Convert.h)
+        cpp06/ex00/main.cpp
+        cpp06/ex00/Convert.cpp
+        cpp06/ex00/Convert.h
+        )
+
+include_directories(cpp06/ex01)
+add_executable(CPP06.ex01
+        cpp06/ex01/main.cpp cpp06/ex01/main.cpp cpp06/ex01/Data.h)
 
 
 
