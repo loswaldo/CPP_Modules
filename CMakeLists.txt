@@ -242,7 +242,16 @@ add_executable(CPP06.ex01
 
 include_directories(cpp06/ex02)
 add_executable(CPP06.ex02
-        cpp06/ex02/main.cpp cpp06/ex02/Base.h cpp06/ex02/A.h cpp06/ex02/B.h cpp06/ex02/C.h)
+        cpp06/ex02/main.cpp
+        cpp06/ex02/Base.h
+        cpp06/ex02/A.h
+        cpp06/ex02/B.h
+        cpp06/ex02/C.h
+        )
+
+include_directories(cpp07/ex00)
+add_executable(CPP07.ex00
+        cpp07/ex00/main.cpp cpp07/ex00/whatever.h)
 
 
 
