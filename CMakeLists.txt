@@ -257,7 +257,15 @@ add_executable(CPP07.ex00
 
 include_directories(cpp07/ex01)
 add_executable(CPP07.ex01
-        cpp07/ex01/main.cpp cpp07/ex01/iter.h)
+        cpp07/ex01/main.cpp
+        cpp07/ex01/iter.h
+        )
+
+include_directories(cpp07/ex02)
+add_executable(CPP07.ex02
+        cpp07/ex02/Array.h
+        cpp07/ex02/main.cpp
+        )
 
 
 
