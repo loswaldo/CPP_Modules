@@ -224,7 +224,12 @@ add_executable(CPP05.ex03
         cpp05/ex03/RobotomyRequestForm.h
         cpp05/ex03/PresidentialPardonForm.cpp
         cpp05/ex03/PresidentialPardonForm.h
-        cpp05/ex03/Intern.cpp cpp05/ex03/Intern.h)
+        cpp05/ex03/Intern.cpp cpp05/ex03/Intern.h
+        )
+
+include_directories(cpp06/ex00)
+add_executable(CPP06.ex00
+        cpp06/ex00/main.cpp cpp06/ex00/Convert.cpp cpp06/ex00/Convert.h)
 
 
 
