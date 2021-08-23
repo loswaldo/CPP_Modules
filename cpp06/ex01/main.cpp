@@ -12,7 +12,7 @@
 char randString()
 {
 	int num;
-	srand(static_cast<unsigned int>(time(0)));
+
 		num = rand() % 127;
 		if (isprint(num))
 		{
@@ -48,6 +48,7 @@ Data* deserialize(uintptr_t raw)
 
 int main()
 {
+	srand(static_cast<unsigned int>(time(0)));
 	Data *data;
 	uintptr_t raw = serialize(data);
 	deserialize(raw);
